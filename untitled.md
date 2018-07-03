@@ -4,70 +4,6 @@ description: Lipsum Loret del mar
 
 # New Integrator
 
-{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
-{% api-method-summary %}
-Get Cakes
-{% endapi-method-summary %}
-
-{% api-method-description %}
-This endpoint allows you to get free cakes.
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" %}
-ID of the cake to get, for free of course.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Authentication token to track down who is emptying our stocks.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="recipe" type="string" %}
-The API will do its best to find a cake matching the provided recipe.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Cake successfully retrieved.
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "name": "Cake's name",
-    "recipe": "Cake's recipe name",
-    "cake": "Binary cake"
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-Could not find a cake matching this query.
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "message": "Ain't no cake like that."
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
 {% api-method method="get" host="" path="/v3/baker/" %}
 {% api-method-summary %}
 Baker
@@ -80,6 +16,14 @@ Description _bakersfield_ `int i;`
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
+{% api-method-parameter name="id" type="integer" required=true %}
+the id  
+  
+  
+~~_Can I link to another page here?_~~ No  
+  
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="name" type="string" required=true %}
 the name of the **baker**
 {% endapi-method-parameter %}
@@ -99,4 +43,9 @@ the name of the **baker**
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% embed data="{\"url\":\"https://en.wikipedia.org/wiki/Trademark\_symbol\",\"type\":\"link\",\"title\":\"Trademark symbol\",\"description\":\"The trademark symbol \(™\), in Unicode U+2122 ™ trade mark sign \(HTML&\#160;&amp;\#8482;&\#160;·  &amp;trade;\), \\\\texttrademark in LaTeX, is a symbol to indicate that the preceding mark is a trademark. It is usually used for unregistered trademarks, as opposed to the registered trademark symbol \(®\) which is reserved for registered trademarks. On Windows it may be entered by holding the Alt while typing the numbers 0 1 5 3 on the numeric keypad or by pressing Alt Gr+T. On macOS, it may be entered by pressing ⌥ Opt+2 .\",\"icon\":{\"type\":\"icon\",\"url\":\"https://en.wikipedia.org/static/apple-touch/wikipedia.png\",\"aspectRatio\":0},\"caption\":\"Easy content insertion from URL\"}" %}
+
+  
+
 
