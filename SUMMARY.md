@@ -3,7 +3,7 @@
 * [README](README.md)
 * [Project Title](project-title.md)
 * [New Integrator](untitled.md)
-* [Untitled](untitled-1.md)
+* [How to link](untitled-1.md)
 
 ## Grouped
 
